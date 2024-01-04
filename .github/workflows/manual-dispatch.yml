@@ -1,3 +1,4 @@
+name: testing-gh-actions
 on: 
   workflow_dispatch:
     inputs:
@@ -9,3 +10,9 @@ on:
         description: 'Define branch name'     
         required: true
         default: 'main'
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
